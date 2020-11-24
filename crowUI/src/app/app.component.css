@@ -2,5 +2,13 @@
 h1{
 	font-family: Gloria Hallelujah;
 	text-align: center;
-	font-size: 100%;
+    font-size: 100%;
+}
+
+.aboutUsTitle{
+    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
+	filter: drop-shadow(3px 3px 8px #000);
+	color: white;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 2em;
 }
