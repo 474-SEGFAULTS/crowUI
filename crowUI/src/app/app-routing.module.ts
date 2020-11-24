@@ -4,7 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'',redirectTo:'welcome',pathMatch:'full'},
   {path:'welcome', component: WelcomeComponent},
   {path:'about', component: AboutComponent}
 ];
