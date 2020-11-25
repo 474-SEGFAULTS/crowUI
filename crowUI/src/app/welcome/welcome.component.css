@@ -1,17 +1,15 @@
 .welcomeTitle{
     font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
-    filter: drop-shadow(3px 3px 8px #000);
-	color: white;
-	background-color: rgba(148, 147, 147, 0.1);
-    padding: 2em;
+    filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
+	color: black;
     text-align: center;
+    padding: 0.5em;
 }
 
 h2 {
 	font-family: Gloria Hallelujah;
 	text-align: center;
     font-size: 5vm;
-    
 }
 
 .info{
@@ -19,12 +17,12 @@ h2 {
 }
 
 .logo{
-    margin-top: 5em;
     margin-left: 2em;
 }
 
 .text {
-    margin-top: 5em;
+    margin-top: 3em;
     margin-left: 3em;
     margin-right: 3em;
+    
   }
