@@ -31,7 +31,7 @@ h2{
 }
 
 .layout{
-    margin-top: 1em;
+    margin-top: 0em;
     position: relative;
     text-align: center;
     bottom: 30em;
@@ -41,8 +41,8 @@ h2{
     opacity: .10;
 }
 
-#username{
-    margin-bottom: 3em;
+#username, #nickname{
+    margin-bottom: 1em;
 }
 
 #password{
@@ -66,7 +66,7 @@ button:hover {
 
 button {
     background-color: rgba(73, 89, 102, 0.904);
-    color: white;
+    color: rgba(255, 255, 255, 0.87);
     padding: 14px 20px;
     margin: 8px;
     border: none;
