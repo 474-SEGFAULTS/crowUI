@@ -14,5 +14,23 @@
     filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
 	color: black;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 2em;
+}
+
+h1{
+    font-size: 65px;
+}
+
+h2{
+    font-family: Gloria Hallelujah;
+    font-size: 50px;
+	text-align: center;
+}
+
+#layout{
+    margin-top: 1em;
+}
+
+#chicken{
+    opacity: 20%;
 }
