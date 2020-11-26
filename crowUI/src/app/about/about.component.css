@@ -1,13 +1,31 @@
-.aboutUsTitle{
-    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
-    filter: drop-shadow(3px 3px 8px #000);
-	color: white;
-	background-color: rgba(148, 147, 147, 0.1);
-    padding: 2em;
+
+#about{
+    background-color:rgba(128, 147, 163, 0.904);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
+.aboutUsTitle{
+    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
+    filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
+	color: black;
+    text-align: center;
+    margin-top: 2em;
+}
+
 h2 {
+    font-family: Gloria Hallelujah;
+    font-size: 25px;
+	text-align: left;
+    margin-right: 2.5em;
+}
+
+h4 {
     font-family: Gloria Hallelujah;
     font-size: 25px;
 	text-align: center;
@@ -18,8 +36,29 @@ h3{
     font-family: Gloria Hallelujah;
     margin-left: 2em;
     text-align: left;
-    
 }
+
+.left{
+    width: 30%;
+    position: relative;
+}
+
+.right{
+    width: 70%;
+    position: relative;
+}
+
+.column{
+    float: left;
+    margin-top: 1em;
+    margin-right: 0em;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 .overview{
     margin-top: 2em;

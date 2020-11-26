@@ -2,8 +2,8 @@
 
 <div>
     <ul>
-        <li>
-            <a><h1>Crows</h1></a>
+        <li class="nav-home ">
+            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='welcome'><h1>Crows</h1></a>
         </li>
 
         <li class="nav-login" style="float:right">
@@ -11,9 +11,6 @@
         </li>
         <li class="nav-about" style="float:right">
             <a [routerLinkActive]='activeClass' class="nav-link" routerLink='about'><h2>About</h2></a>
-        </li>
-        <li class="nav-home " style="float:right">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='welcome'><h2>Home</h2></a>
         </li>
         
     </ul>
