@@ -43,7 +43,6 @@ h2 {
 .column{
     float: left;
     margin-top: 1em;
-    margin-right: 0em;
 }
 
 .row:after {
