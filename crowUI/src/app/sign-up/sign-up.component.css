@@ -1,5 +1,5 @@
 #sign{
-    background-color:rgba(128, 147, 163, 0.904);
+    background-color:rgba(198, 206, 212, 0.904);
     background-size: 100% 100%;
     position: absolute;
     z-index: 1;
@@ -65,7 +65,7 @@ button:hover {
 }
 
 button {
-    background-color: rgba(73, 89, 102, 0.904);
+    background-color: #3A87F9;
     color: rgba(255, 255, 255, 0.87);
     padding: 14px 20px;
     margin: 8px;
