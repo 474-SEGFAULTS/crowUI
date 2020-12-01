@@ -1,7 +1,7 @@
 #about{
     background-color:rgba(198, 206, 212, 0.904);
     background-size: 100% 100%;
-    position: absolute;
+    position: relative;
     z-index: 1;
     background-repeat: no-repeat;
     width: 100%;
@@ -14,20 +14,18 @@
     filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
 	color: black;
     text-align: center;
-    margin-top: 2em;
+    padding-top: 2em;
 }
 
 h2 {
     font-family: Gloria Hallelujah;
     font-size: 25px;
-	text-align: left;
     margin-right: 2.5em;
 }
 
 h4 {
     font-family: Gloria Hallelujah;
     font-size: 25px;
-	text-align: center;
 }
 
 h3{
@@ -35,28 +33,6 @@ h3{
     margin-left: 2em;
     text-align: left;
 }
-
-.left{
-    width: 30%;
-    position: relative;
-}
-
-.right{
-    width: 70%;
-    position: relative;
-}
-
-.column{
-    float: left;
-    margin-top: 1em;
-    margin-right: 0em;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
 .overview{
     margin-top: 2em;
@@ -66,5 +42,6 @@ h3{
 }
 
 .link{
-    margin-top: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 2em;
 }

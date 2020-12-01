@@ -1,55 +1,26 @@
-html {background-color: black}
-
 #welcome{
     background-color:rgba(198, 206, 212, 0.904);
     background-size: 100% 100%;
     position: absolute;
     z-index: 1;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
-.welcomeTitle{
-    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
-    filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
-	color: black;
-    text-align: center;
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
 h2 {
 	font-family: Gloria Hallelujah;
-	text-align: center;
     font-size: 5vm;
 }
 
-.info{
-    margin-top: 0em;
+.empty{
+    margin-top: 3em;
 }
 
 #logo{
     background-image: url('chicken.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90% 90%;
+    background-size: 100%;
     background-color: transparent;
-    float: left;
-    margin-left: 2em;
-    margin-top: 4em;
     height: 500px;
     width: 500px;
 }
-
-img{
-    border: 0;
-}
-
-.text {
-    margin-top: 4em;
-    margin-left: 3em;
-    margin-right: 1em;
-    padding-left: 1em;
-  }
