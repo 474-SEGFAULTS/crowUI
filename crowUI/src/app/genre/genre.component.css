@@ -8,3 +8,12 @@
     height: 100%;
     text-align: center;
 }
+
+h2{
+	font-family: Gloria Hallelujah;
+    font-size: 25px;
+}
+
+#chicken{
+    opacity: .10;
+}
