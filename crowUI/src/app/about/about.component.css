@@ -45,3 +45,33 @@ h3{
     padding-top: 1em;
     padding-bottom: 2em;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+  
+a{
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+h5{
+    margin-top: 0.25em;
+    font-family: Gloria Hallelujah, sans-serif, serif;;
+	text-align: center;
+    font-size: 25px;
+    color: white;
+}
