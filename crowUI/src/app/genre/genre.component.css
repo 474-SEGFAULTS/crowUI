@@ -17,3 +17,17 @@ h2{
 #chicken{
     opacity: .10;
 }
+
+.list-group{
+    overflow-y: scroll;
+    height: 640px;
+}
+
+.tab-content{
+    overflow-y: scroll;
+    height: 640px;
+}
+
+.empty{
+    margin-top: 1em;
+}
