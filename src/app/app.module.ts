@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { ArtistComponent } from './artist/artist.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
@@ -14,6 +16,8 @@ import { GenreComponent } from './genre/genre.component';
 @NgModule({
   declarations: [
     AppComponent,
+    PlaylistComponent,
+    ArtistComponent
     WelcomeComponent,
     AboutComponent,
     MenuComponent,
