@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GenreComponent } from './genre/genre.component';
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    GenreComponent
+    GenreComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
