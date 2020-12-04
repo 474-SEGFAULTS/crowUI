@@ -1,0 +1,37 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: lightgray;
+  }
+  
+  .flex-container > div {
+     background-color: #c7c4c4; 
+   /* background-image: url(""); */
+    margin-bottom: 100px;
+    margin-left: 75px;
+    padding-top: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    padding-top: 30px;
+    background-color: lightgray;    
+  }
+
+  h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #666;
+  }
+  .caption {
+    position: absolute;
+    padding-left:50px;
+    transform: translateY(520%);
+   
+}
