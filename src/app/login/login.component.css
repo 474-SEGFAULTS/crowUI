@@ -9,27 +9,6 @@
     text-align: center;
 }
 
-.loginTitle{
-    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
-    filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
-	color: black;
-    text-align: center;
-    margin-top: 0em;
-    padding: 1em;
-}
-
-h1{
-    font-size: 65px;
-}
-
-h2{
-    font-family: Gloria Hallelujah;
-    font-size: 50px;
-    text-align: center;
-    filter: drop-shadow(3px 3px 8px rgb(153, 153, 153));
-
-}
-
 .layout{
     margin-top: 1em;
     position: relative;
@@ -57,7 +36,6 @@ input[type=text], input[type=password] {
     border: 1px solid rgba(120, 135, 148, 0.904);
     box-sizing: border-box;
     text-align: center;
-    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
   }
 
 button:hover {

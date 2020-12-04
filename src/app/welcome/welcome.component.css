@@ -7,20 +7,3 @@
     height: 100%;
     text-align: center;
 }
-
-h2 {
-	font-family: Gloria Hallelujah;
-    font-size: 5vm;
-}
-
-.empty{
-    margin-top: 3em;
-}
-
-#logo{
-    background-image: url('chicken.png');
-    background-size: 100%;
-    background-color: transparent;
-    height: 500px;
-    width: 500px;
-}
