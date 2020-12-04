@@ -9,6 +9,7 @@
     text-align: center;
 }
 
+
 .layout{
     margin-top: 1em;
     position: relative;
@@ -17,6 +18,7 @@
 }
 
 #chicken{
+    src: url("chicken.png");
     opacity: .10;
 }
 
