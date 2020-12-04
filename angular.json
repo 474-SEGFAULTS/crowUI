@@ -87,9 +87,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
-           "styles": [
+            "styles": [
               "src/styles.css"
-          ],
+            ],
             "scripts": []
           }
         },
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crowUI"
+    }
+  },
+  "defaultProject": "crowUI",
+  "cli": {
+    "analytics": "a651c5cd-7fe7-4e5b-b913-42661a49f90f"
+  }
 }
