@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
+import { AlbumComponent } from './album/album.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'welcome',pathMatch:'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'signUp', component: SignUpComponent},
   {path:'home', component: HomeComponent},
-  {path:'genres', component: GenreComponent}
+  {path:'genres', component: GenreComponent},
+  {path:'album', component: AlbumComponent}
 ];
 
 @NgModule({
