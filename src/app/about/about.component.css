@@ -9,31 +9,6 @@
     text-align: center;
 }
 
-.aboutUsTitle{
-    font-family: Gloria Hallelujah, "Comic Sans", sans-serif, serif;
-    filter: drop-shadow(3px 3px 8px rgb(71, 71, 71));
-	color: black;
-    text-align: center;
-    padding-top: 2em;
-}
-
-h2 {
-    font-family: Gloria Hallelujah;
-    font-size: 25px;
-    margin-right: 2.5em;
-}
-
-h4 {
-    font-family: Gloria Hallelujah;
-    font-size: 25px;
-}
-
-h3{
-    font-family: Gloria Hallelujah;
-    margin-left: 2em;
-    text-align: left;
-}
-
 .overview{
     margin-top: 2em;
     margin-left: 2em;

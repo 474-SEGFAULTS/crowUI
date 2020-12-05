@@ -19,11 +19,3 @@ a{
 li a:hover:not(.active) {
     background-color: #111;
 }
-
-h2{
-    margin-top: 0.25em;
-    font-family: Gloria Hallelujah, sans-serif, serif;;
-	text-align: center;
-    font-size: 25px;
-    color: white;
-}
