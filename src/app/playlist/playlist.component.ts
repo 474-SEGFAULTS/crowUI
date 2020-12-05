@@ -26,8 +26,8 @@ export class PlaylistComponent implements OnInit {
 		console.log("help");
 	}
 
-	loadPlaylist(): void {
-		this.apiSvc.getPlaylist(1).subscribe(response => {
+	loadPlaylist(id: number): void {
+		this.apiSvc.getPlaylist(id).subscribe(response => {
 			console.log(response);
 		}, err => {
 			console.log('ERROR!');
