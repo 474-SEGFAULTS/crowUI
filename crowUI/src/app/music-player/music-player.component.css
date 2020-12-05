@@ -1,0 +1,17 @@
+.btn-hide {
+    display: none;
+}
+
+.btn-show {
+    display: block;
+}
+
+.player-controls {
+    align-items: center;
+    justify-content: center;
+}
+
+.player-controls progress {
+    width: 90%;
+}
+
