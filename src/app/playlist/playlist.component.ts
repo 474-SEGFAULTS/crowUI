@@ -1,5 +1,6 @@
 import { Input } from '@angular/core';
 import { Component, OnInit, InputDecorator } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 import { $ } from 'protractor';
 
 @Component({
@@ -17,10 +18,14 @@ export class PlaylistComponent implements OnInit {
 		'created': 'yesterday'
 	}]
 
-	constructor() { }
+	constructor(private apiSvc:ApiService) { }
 
 	ngOnInit(): void {
 		console.log("help");
+	}
+
+	loadPlaylist(): void {
+		
 	}
 
 	playSong(id: string): void {

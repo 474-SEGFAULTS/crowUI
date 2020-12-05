@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -32,7 +34,8 @@ import { AlbumComponent } from './album/album.component';
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
