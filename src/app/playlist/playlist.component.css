@@ -9,7 +9,7 @@ tr {
 }
 
 #picture {
-	background-image: url('assets/chicken-music.png');
+	background-image: url('../../assets/chicken.png');
 	float: right;
 	background-size: 300px 300px;
 	background-repeat: no-repeat;
