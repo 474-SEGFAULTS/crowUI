@@ -1,6 +1,8 @@
 import { Input } from '@angular/core';
 import { Component, OnInit, InputDecorator } from '@angular/core';
+
 import { ApiService } from 'src/app/api.service';
+
 import { $ } from 'protractor';
 
 @Component({
@@ -25,7 +27,12 @@ export class PlaylistComponent implements OnInit {
 	}
 
 	loadPlaylist(): void {
-		
+		this.apiSvc.getPlaylist(1).subscribe(response => {
+			console.log(response);
+		}, err => {
+			console.log('ERROR!');
+			console.log(err);
+		})
 	}
 
 	playSong(id: string): void {
