@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import $ from "jquery";
 
 @Component({
@@ -11,12 +11,11 @@ export class MusicPlayerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // $(document).ready(function () {
     var song = <HTMLVideoElement>document.getElementById('player');
     var play = document.getElementById("play");
     var pause = document.getElementById("pause");
-    var forward = document.getElementById("forward");
-    var backward = document.getElementById("backward");
+    var next = document.getElementById("forward");
+    var prev = document.getElementById("backward");
 
 
     $(play).click(function () {
@@ -36,34 +35,33 @@ export class MusicPlayerComponent implements OnInit {
       pause.classList.remove('btn-show');
       pause.classList.add('btn-hide');
 
-      // audio dom manipulation
       song.pause();
     });
 
-    $(forward).click(function () {
+    $(next).click(function () {
+      
+    });
+
+    $(prev).click(function () {
 
     });
 
-    $(backward).click(function () {
-
-    });
-
-    // function formatTime(song) {
-
-    //   var minutes = parseInt(Math.floor(song / 60).toFixed(2));
-    //   var seconds = parseInt(Math.floor(song - minutes * 60).toFixed(2));
-
-
-    //   return time = minutes + ":" + seconds;
-    // }
   }
   
+  formatTime(song) {
+
+      var minutes = parseInt(Math.floor(song / 60).toFixed(2));
+      var seconds = parseInt(Math.floor(song - minutes * 60).toFixed(2));
+      function str_pad_left(string,pad,length) {
+        return (new Array(length+1).join(pad)+string).slice(-length);
+    }
+
+      return str_pad_left(minutes,'0',2)+':'+str_pad_left(seconds,'0',2);}
+
   initProgressBar() {
     var song = <HTMLVideoElement>document.getElementById('player');
     var play = document.getElementById("play");
     var pause = document.getElementById("pause");
-    var forward = document.getElementById("forward");
-    var backward = document.getElementById("backward");
     var progressbar = <HTMLInputElement>document.getElementById('seek-obj');
     progressbar.value = (song.currentTime / song.duration).toFixed(2);
     progressbar.addEventListener("click", seek);
@@ -75,8 +73,8 @@ export class MusicPlayerComponent implements OnInit {
       pause.classList.add('btn-hide');
     }
 
-    document.getElementById("music-current").innerHTML = song.currentTime.toFixed(2); //formatTime(song.currentTime)
-    document.getElementById("music-duration").textContent = song.duration.toFixed(2);
+    document.getElementById("music-current").innerHTML = this.formatTime(song.currentTime);
+    document.getElementById("music-duration").textContent = this.formatTime(song.duration);
 
     function seek(event) {
       var percent = event.offsetX / this.offsetWidth;
