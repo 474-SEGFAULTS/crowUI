@@ -16,25 +16,25 @@ import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PlaylistComponent,
-    ArtistComponent,
-    DiscussionComponent,
-    WelcomeComponent,
-    AboutComponent,
-    MenuComponent,
-    LoginComponent,
-    SignUpComponent,
-    HomeComponent,
-    GenreComponent,
-    AlbumComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		PlaylistComponent,
+		ArtistComponent,
+		DiscussionComponent,
+		WelcomeComponent,
+		AboutComponent,
+		MenuComponent,
+		LoginComponent,
+		SignUpComponent,
+		HomeComponent,
+		GenreComponent,
+		AlbumComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

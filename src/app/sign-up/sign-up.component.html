@@ -1,40 +1,25 @@
 <app-menu></app-menu>
-<div id="sign">
-    <div class="signTitle" style="padding-top: 2em;">
-        <h1 class="display-3">Sign Up to Crows</h1>
-    </div>
 
-    <img id="chicken" src="chicken.png">
-    <div class="layout">
-        <div id="writtenInfo">
-            <div id="nickname">
-                <h2><b>Create a Nickname</b></h2>
-                <input type="text" placeholder="Enter a NickName" name="nick" required>
-            </div>
-            <div id="username">
-                <h2><b>Create a Username</b></h2>
-                <input type="text" placeholder="Enter a Username" name="uname" required>
-            </div>
-            <div id="password">
-                <h2><b>Create a Password</b></h2>
-                <input type="password" placeholder="Enter a Password" name="psw" required>
-            </div>
-
-        </div>
-
-        <div id="buttons">
-            <div id="create">
-                <button class="btn btn-primary btn-lg active" role="button">
-                    Create Account
-                </button>
-            </div>
-
-            <div id="login">
-                <button class="btn btn-primary btn-lg active" role="button">
-                    Login Page
-                </button>
+<div class="row mt-5">
+    <div class="col"></div>
+    <div class="col">
+        <h1 class="display-4 mt-3">Sign Up</h1>
+        <p>
+            <a href="login">Or do you want to log in, instead?</a>
+        </p>
+        <div class="card">
+            <div class="card-body">
+                <label for="username">Username</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <label for="Password">Password</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="Password" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
             </div>
         </div>
-
     </div>
+    <div class="col"></div>
 </div>
