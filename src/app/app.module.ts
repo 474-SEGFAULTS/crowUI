@@ -16,6 +16,8 @@ import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+	AppRoutingModule,
+	HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
