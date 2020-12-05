@@ -1,0 +1,36 @@
+.btn-hide {
+    display: none;
+}
+
+.btn-show {
+    display: block;
+}
+
+.player-controls {
+    align-items: center;
+    justify-content: center;
+}
+
+.player-controls progress {
+    width: 90%;
+}
+
+
+.player-controls progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    color: blue;
+    height: 8px;
+}
+
+.player-controls progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #dfdfdf;
+    color: blue;
+}
+
+.player-controls progress::-webkit-progress-value {
+    background-color: blue;
+}

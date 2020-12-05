@@ -1,0 +1,71 @@
+<div class="view">
+    <!-- <div class="container-fluid"> -->
+    <div class="flex-center flex-column">
+
+        <audio id="player" src="../../assets/music1.mp3" ontimeupdate="initProgressBar()"></audio>
+
+        <div class="row justify-content-center">
+
+            <div class="card" style="width: 50%;">
+
+                <!-- album image -->
+                <div class="view overlay">
+                    <img class="card-img-top" src="./../../assets/UD.jpg">
+                </div>
+
+                <!-- Card -->
+                <div class="card-body" id="player-card">
+
+                    <!-- Title -->
+                    <h4 class="card-title font-weight-bold"><a>River flows in you</a></h4>
+
+                    <!-- Song Title -->
+                    <p class="singer">Yiruma</p>
+
+                    <!-- times -->
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text" id="music-current">
+                            0:00
+                        </p>
+                        <p class="card-text" id="music-duration">
+                            3:30
+                        </p>
+
+                    </div>
+                    <!-- Progress bar -->
+                    <ul class="list-unstyled list-inline player-controls">
+                        <span id="seek-obj-container">
+                            <progress id="seek-obj" value="0" max="1"></progress>
+                        </span>
+                    </ul>
+
+                    
+
+
+
+                    <!-- Controls -->
+                    <hr class="my-4">
+                    <ul class="list-unstyled list-inline d-flex justify-content-center mb-0">
+
+                        <li class="list-inline-item mr-0 mt-2">
+                            <i class="fa fa-backward" aria-hidden="true" id="backward"></i>
+                        </li>
+                        <li class="list-inline-item mr-4 ml-4">
+                            <i class="fa fa-pause fa-3x btn-show" aria-hidden="true" id="pause"></i>
+                            <i class="fa fa-play fa-3x btn-show" aria-hidden="true" id="play"></i>
+                        </li>
+                        <li class="list-inline-item mr-0 mt-2">
+                            <i class="fa fa-forward" aria-hidden="true" id="forward"></i>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <!-- Card -->
+
+        </div>
+
+    </div>
+    <!-- </div> -->
+</div>

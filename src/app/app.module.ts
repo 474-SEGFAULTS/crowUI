@@ -14,6 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
+import { MusicPlayerComponent } from './music-player/music-player.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AlbumComponent } from './album/album.component';
     SignUpComponent,
     HomeComponent,
     GenreComponent,
-    AlbumComponent
+    AlbumComponent,
+    MusicPlayerComponent
   ],
   imports: [
     BrowserModule,
