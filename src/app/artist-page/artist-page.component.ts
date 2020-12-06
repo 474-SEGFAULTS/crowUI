@@ -1,5 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { ActivatedRoute } from '@angular/router';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-artist-page',
@@ -16,10 +20,13 @@ export class ArtistPageComponent implements OnInit {
 		'created': 'yesterday'
   }]
   
-  constructor(private apiSvc:ApiService) { 
+  constructor(private apiSvc:ApiService, private route:ActivatedRoute) { 
+  /* const id: Observable<string> = route.params.pipe(map(p=>p.id))
+    console.log(id); */
   }
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.params['id']);
     console.log("help");
   }
 

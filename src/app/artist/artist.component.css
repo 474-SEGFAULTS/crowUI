@@ -32,6 +32,13 @@
   .caption {
     position: absolute;
     padding-left:50px;
-    transform: translateY(520%);
-   
+    transform: translateY(520%);  
+}
+
+#picture {
+	background-image: url('../../assets/chicken.png');
+	float: right;
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+	padding-right: 30em;
 }
