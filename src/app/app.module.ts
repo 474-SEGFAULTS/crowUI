@@ -14,7 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './token-interceptor.service';
@@ -35,7 +34,6 @@ import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
     GenreComponent,
     AlbumComponent,
     MusicPlayerComponent,
-    TopBarComponent,
     MusicPlayerBarComponent,
     PlaylistPageComponent
   ],
