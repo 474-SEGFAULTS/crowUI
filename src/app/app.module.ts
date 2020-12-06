@@ -8,7 +8,6 @@ import { ArtistComponent } from './artist/artist.component';
 import { DiscussionComponent } from './discussion/discussion.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
-import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
@@ -16,8 +15,11 @@ import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { HttpClientModule } from '@angular/common/http';
 import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,6 @@ import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.com
     DiscussionComponent,
     WelcomeComponent,
     AboutComponent,
-    MenuComponent,
     LoginComponent,
     SignUpComponent,
     HomeComponent,
@@ -35,14 +36,16 @@ import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.com
     AlbumComponent,
     MusicPlayerComponent,
     TopBarComponent,
-    MusicPlayerBarComponent
+    MusicPlayerBarComponent,
+    PlaylistPageComponent
   ],
   imports: [
     BrowserModule,
 	AppRoutingModule,
-	HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

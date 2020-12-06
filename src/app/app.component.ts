@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crowUI';
+  constructor(public authSvc:AuthService) {
+    authSvc.authorize();
+  }
+
+  signout(){
+    this.authSvc.logout();
+    return false;
+  }
+  get loggedIn():boolean{
+    return this.authSvc.loggedIn;
+  }
 }
