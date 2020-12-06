@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private route: ActivatedRoute,private router: Router,private authSvc:AuthService) {
       if (authSvc.loggedIn)
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
    }
 
   ngOnInit(): void {
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
       username: ['',Validators.required],
       password: ['',Validators.required]
     });
-    this.returnUrl=this.route.snapshot.queryParams['returnUrl'] || '/';
+    
+    this.returnUrl=this.route.snapshot.queryParams['returnUrl'] || '/home';
   }
 
   login(){
