@@ -1,12 +1,7 @@
 body {
-   min-height: 100vh;
-   max-height: 100vh;
-   margin: 0;
-   display: -webkit-box;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   flex-direction: column;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
    background: -webkit-linear-gradient(to top, #232526, #414345);
 }
 
@@ -18,13 +13,6 @@ body a:not(:hover) {
    text-decoration: none;
 }
 
-/* body .content {
-   overflow: hidden;
-   -webkit-box-flex: 1;
-   flex-grow: 1;
-   height: calc(100% - 80px);
-   font-size: 48px;
-} */
 
 body .player {
    z-index: 10;
