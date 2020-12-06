@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
+import { MusicPlayerComponent } from './music-player/music-player.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'welcome',pathMatch:'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'signUp', component: SignUpComponent},
   {path:'home', component: HomeComponent},
   {path:'genres', component: GenreComponent},
+  {path:'music_player', component: MusicPlayerComponent}
   {path:'albums', component: AlbumComponent},
   {path:'playlists', component: PlaylistComponent},
   {path:'artists', component: ArtistComponent}

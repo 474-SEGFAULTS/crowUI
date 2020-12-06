@@ -14,8 +14,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
+import { MusicPlayerComponent } from './music-player/music-player.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     GenreComponent,
     AlbumComponent,
+    MusicPlayerComponent,
     TopBarComponent
   ],
   imports: [
