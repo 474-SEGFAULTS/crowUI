@@ -34,7 +34,7 @@
                                 <th scope="col">Artist</th>
                                 <th scope="col">Album</th>
                                 <th scope="col">Created</th>
-                              </tr>
+                              </tr>                   
                             </thead>
                             <tbody>
                               <tr>
@@ -43,7 +43,14 @@
                                 <td>Someone</td>
                                 <td>Someone2</td>
                                 <td>11-29-20</td>
-                              </tr>
+                              </tr>                       
+                              <!-- <tr *ngFor="let p of examplePlaylist">
+                                <th (click)="playSong( p.id )" scope="row">{{ p.id }}</th>
+                                <td (click)="playSong( p.id )">{{ p.title }}</td>
+                                <td (click)="playSong( p.id )">{{ p.artist }}</td>
+                                <td (click)="playSong( p.id )">{{ p.album }}</td>
+                                <td (click)="playSong( p.id )">{{ p.created }} </td>
+                              </tr>  -->
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Tell Me A Song</td>
