@@ -34,7 +34,6 @@ import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
     GenreComponent,
     AlbumComponent,
     MusicPlayerComponent,
-    TopBarComponent,
     MusicPlayerBarComponent,
     PlaylistPageComponent
   ],
