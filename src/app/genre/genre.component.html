@@ -1,49 +1,52 @@
-<body id="genre">
-    <div class="empty"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-rock" role="tab"><h3>Rock and Roll</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-alternative" role="tab"><h3>Alternative</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-pop" role="tab"><h3>Pop</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-popular" role="tab"><h3>Popular</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-country" role="tab"><h3>Country</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-soul" role="tab"><h3>R&B and Soul</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-hip" role="tab"><h3>Hip Hop</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-elec" role="tab"><h3>Electronic</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-dance" role="tab"><h3>Dance</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-jazz" role="tab"><h3>Jazz</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-blues" role="tab"><h3>Blues</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-classic" role="tab"><h3>Classical</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-heavy" role="tab"><h3>Heavy Metal</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-regg" role="tab"><h3>Reggae</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-folk" role="tab"><h3>Folk</h3></a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-latin" role="tab"><h3>Latin</h3></a>
-                  </div>
-            </div>
-            <div class="col text-center">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-rock" role="tabpanel">
-                        <table class="table text-center">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Artist</th>
-                                <th scope="col">Album</th>
-                                <th scope="col">Created</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Song Name</td>
-                                <td>Someone</td>
-                                <td>Someone2</td>
-                                <td>11-29-20</td>
-                              </tr>
-                              <tr>
+<app-menu></app-menu>
+<div id="genre" class="overlfow-auto" style="height: 50;">
+  <div class="title text-center" style="padding-top: 1em;">
+    <h1 class="display-3 mt-5">Genres</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group overflow-auto" id="list-tab" role="tablist" style="height: 50%;">
+          <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-rock" role="tab"><h3>Rock and Roll</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-alternative" role="tab"><h3>Alternative</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-pop" role="tab"><h3>Pop</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-popular" role="tab"><h3>Popular</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-country" role="tab"><h3>Country</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-soul" role="tab"><h3>R&B and Soul</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-hip" role="tab"><h3>Hip Hop</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-elec" role="tab"><h3>Electronic</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-dance" role="tab"><h3>Dance</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-jazz" role="tab"><h3>Jazz</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-blues" role="tab"><h3>Blues</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-classic" role="tab"><h3>Classical</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-heavy" role="tab"><h3>Heavy Metal</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-regg" role="tab"><h3>Reggae</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-folk" role="tab"><h3>Folk</h3></a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-latin" role="tab"><h3>Latin</h3></a>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="tab-content overflow-auto border" id="nav-tabContent" style="height: 50%;">
+          <div class="tab-pane fade show active" id="list-rock" role="tabpanel">
+            <table class="table text-center table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Artist</th>
+                  <th scope="col">Album</th>
+                  <th scope="col">Created</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Song Name</td>
+                  <td>Someone</td>
+                  <td>Someone2</td>
+                  <td>11-29-20</td>
+                </tr>
+                <tr>
                                 <th scope="row">2</th>
                                 <td>Tell Me A Song</td>
                                 <td>Someone2</td>
@@ -142,10 +145,10 @@
                                 <td>11-29-20</td>
                               </tr>
                             </tbody>
-                          </table>
-                    </div>
+            </table>
+          </div>
                     <div class="tab-pane fade" id="list-alternative" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -181,7 +184,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-pop" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -217,43 +220,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-popular" role="tabpanel">
-                        <table class="table text-center">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Artist</th>
-                                <th scope="col">Album</th>
-                                <th scope="col">Created</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Song Name</td>
-                                <td>Someone</td>
-                                <td>Someone2</td>
-                                <td>11-29-20</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Tell Me A Song</td>
-                                <td>Someone2</td>
-                                <td>Someone2</td>
-                                <td>11-29-20</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Elmo's World</td>
-                                <td>Elmo</td>
-                                <td>Someone2</td>
-                                <td>11-29-20</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-                    <div class="tab-pane fade" id="list-popular" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -289,7 +256,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-country" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -325,7 +292,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-soul" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -361,7 +328,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-hip" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -397,7 +364,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-elec" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -433,7 +400,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-dance" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -469,7 +436,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-jazz" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -541,7 +508,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-classic" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -577,7 +544,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-heavy" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -613,7 +580,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-regg" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -649,7 +616,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-folk" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -685,7 +652,7 @@
                           </table>
                     </div>
                     <div class="tab-pane fade" id="list-latin" role="tabpanel">
-                        <table class="table text-center">
+                        <table class="table text-center table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -724,4 +691,4 @@
             </div>
         </div>
     </div>
-</body>
+  </div>

@@ -1,36 +1,24 @@
-<app-menu></app-menu>
-<div id="login">
-    <div class="loginTitle" style="padding-top: 2em;">
-        <h1 class="display-3">Login to Crows</h1>
-    </div>
-
-    <img id="chicken" src="./../../assets/chicken.png" alt="image">
-    <div class="layout">
-        <div id="writtenInfo">
-            <div id="username">
-                <h2><b>Username</b></h2>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-            </div>
-            <div id="password">
-                <h2><b>Password</b></h2>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-            </div>
-
-        </div>
-
-        <div id="buttons">
-            <div id="in">
-                <button class="btn btn-primary btn-lg active" role="button">
-                    Login
-                </button>
-            </div>
-
-            <div id="up">
-                <button class="btn btn-primary btn-lg active" role="button">
-                    Sign Up
-                </button>
+<app-top-bar></app-top-bar>
+<div class="row mt-5">
+    <div class="col"></div>
+    <div class="col">
+        <h1 class="display-4 mt-3">Login</h1>
+        <p>
+            <a href="signUp">Or do you want to sign up, instead?</a>
+        </p>
+        <div class="card">
+            <div class="card-body">
+                <label for="username">Username</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <label for="Password">Password</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="Password" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Login</button>
             </div>
         </div>
-
     </div>
+    <div class="col"></div>
 </div>

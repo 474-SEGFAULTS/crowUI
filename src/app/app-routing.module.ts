@@ -22,10 +22,10 @@ const routes: Routes = [
   {path:'signUp', component: SignUpComponent},
   {path:'home', component: HomeComponent},
   {path:'genres', component: GenreComponent},
-  {path:'album', component: AlbumComponent},
-  {path:'playlist', component: PlaylistComponent},
-  {path:'artist', component: ArtistComponent},
   {path:'music_player', component: MusicPlayerComponent}
+  {path:'albums', component: AlbumComponent},
+  {path:'playlists', component: PlaylistComponent},
+  {path:'artists', component: ArtistComponent}
 ];
 
 @NgModule({
