@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
+import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.component';
 import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'albums', component: AlbumComponent},
   {path:'playlists', component: PlaylistComponent},
   {path:'artists', component: ArtistComponent},
+  {path:'music_player_bar', component: MusicPlayerBarComponent},
   {path:'playlists/:id', component: PlaylistPageComponent}
 ];
 
