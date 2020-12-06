@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:'albums', component: AlbumComponent},
   {path:'playlists', component: PlaylistComponent},
   {path:'artists', component: ArtistComponent},
-  {path:'playlist/:id', component: PlaylistPageComponent}
+  {path:'playlists/:id', component: PlaylistPageComponent}
 ];
 
 @NgModule({
