@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AlbumPageComponent } from './album-page/album-page.component';
+import { ArtistPageComponent } from './artist-page/artist-page.component';
 import { ArtistComponent } from './artist/artist.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { DiscussionComponent } from './discussion/discussion.component';
@@ -23,7 +25,10 @@ const routes: Routes = [
   {path:'genres', component: GenreComponent},
   {path:'albums', component: AlbumComponent},
   {path:'playlists', component: PlaylistComponent},
-  {path:'artists', component: ArtistComponent}
+  {path:'artists', component: ArtistComponent},
+  {path:'artist-page', component: ArtistPageComponent},
+  {path:'album-page', component: AlbumPageComponent}
+
 ];
 
 @NgModule({
