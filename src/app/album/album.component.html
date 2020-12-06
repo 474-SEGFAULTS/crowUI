@@ -19,9 +19,9 @@
     <img src="img" alt="img" width="250px" height="250px">
     <p class="caption"> Album Name</p> </div>
   <!--
-    <div>
+    <div *ngFor="let p of albumsCollection">
       <img src=(click)="playSong( p.id )">{{ p.coverimg }} alt="img" width="250px" height="250px">
-          <p class="caption"> (click)="playSong( p.id )">{{ p.album}}</p> </div>
+          <p class="caption"> (click)="playSong( p.id )">{{ p.album}} </p> </div>
   -->  
   <div><img src="img" alt="img" wwidth="250px" height="250px">
     <p class="caption"> Album Name</p> </div>
