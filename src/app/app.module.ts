@@ -17,6 +17,7 @@ import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MusicPlayerBarComponent } from './music-player-bar/music-player-bar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     GenreComponent,
     AlbumComponent,
     MusicPlayerComponent,
-    TopBarComponent
+    TopBarComponent,
+    MusicPlayerBarComponent
   ],
   imports: [
     BrowserModule,
