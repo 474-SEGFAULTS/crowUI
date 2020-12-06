@@ -21,8 +21,6 @@ export class ArtistPageComponent implements OnInit {
   }]
   
   constructor(private apiSvc:ApiService, private route:ActivatedRoute) { 
-  /* const id: Observable<string> = route.params.pipe(map(p=>p.id))
-    console.log(id); */
   }
 
   ngOnInit(): void {

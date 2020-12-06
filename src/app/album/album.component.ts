@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
+  /* albumsCollection = [{
+    'id': 1,
+    'coverimg': 'album image',
+		'album': 'album name',
+	}] */
+
   constructor() { }
 
   ngOnInit(): void {
