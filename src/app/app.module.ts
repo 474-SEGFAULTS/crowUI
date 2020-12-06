@@ -18,6 +18,7 @@ import { MusicPlayerComponent } from './music-player/music-player.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     GenreComponent,
     AlbumComponent,
     MusicPlayerComponent,
+    TopBarComponent,
+    PlaylistPageComponent
   ],
   imports: [
     BrowserModule,
