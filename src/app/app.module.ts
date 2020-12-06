@@ -16,7 +16,10 @@ import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,9 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
 	AppRoutingModule,
-	HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
