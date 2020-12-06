@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { GenreComponent } from './genre/genre.component';
 import { AlbumComponent } from './album/album.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'welcome',pathMatch:'full'},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'music_player', component: MusicPlayerComponent},
   {path:'albums', component: AlbumComponent},
   {path:'playlists', component: PlaylistComponent},
-  {path:'artists', component: ArtistComponent}
+  {path:'artists', component: ArtistComponent},
+  {path:'playlist/:id', component: PlaylistPageComponent}
 ];
 
 @NgModule({
