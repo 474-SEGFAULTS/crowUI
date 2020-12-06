@@ -1,27 +1,5 @@
-<!--
-<div>
-    <ul>
-        <li class="nav-home">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='/welcome'><h2 class="text-white">Crows</h2></a>
-        </li>
-
-        <li class="nav-login" style="float:right">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='/login'><h2 class="text-white">Login</h2></a>
-        </li>
-
-        <li class="nav-login" style="float:right">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='/signUp'><h2 class="text-white">Sign Up</h2></a>
-        </li>
-
-        <li class="nav-about" style="float:right">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='/about'><h2 class="text-white">About</h2></a>
-        </li>
-        
-    </ul>
-</div>
--->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="#">Crows</a>
+<!--logged in-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" [hidden]='!loggedIn'>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -29,18 +7,45 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
-				<a [routerLinkActive]='activeClass' class="nav-link" routerLink='/welcome'>Home <span class="sr-only">(current)</span></a>
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/home'>Crows <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-				<a [routerLinkActive]='activeClass' class="nav-link" routerLink='/playlist'>Playlists</a>
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/playlists'>Playlists</a>
             </li>
             <li class="nav-item">
-				<a [routerLinkActive]='activeClass' class="nav-link" routerLink='/about'>About</a>
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/albums'>Albums</a>
 			</li>
+			<li class="nav-item">
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/artists'>Artists</a>
+			</li>
+			<li class="nav-item">
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/genres'>Genres</a>
+            </li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search Songs" aria-label="Search">
-			<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+			<a routerLinkActive='activeClass' class="nav-link" routerLink='/welcome'>Logout</a>
 		</form>
+	</div>
+</nav>
+
+<!--not logged in-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" [hidden]='loggedIn'>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/welcome'>Crows<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a routerLinkActive='activeClass' class="nav-link" routerLink='/about'>About Us</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-primary my-2 my-sm-0  mr-2" routerLink="/signUp">Sign Up</button>
+            <button class="btn btn-outline-primary my-2 my-sm-0" routerLink="/login">Login</button>
+      </form>
 	</div>
 </nav>
