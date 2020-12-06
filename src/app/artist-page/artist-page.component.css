@@ -1,0 +1,43 @@
+body {
+	padding-top: 5rem;
+	background-color: lightgray;    
+	height: 100vh;
+}
+
+tr {
+	cursor: pointer;
+}
+
+#picture {
+	background-image: url('../../assets/chicken.png');
+	float: right;
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+	padding-right: 30em;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators {
+  filter: invert(1);
+}
+
+.carousel {
+	width:640px;
+	height:360px;
+
+}
+.col-centered{
+	float: none;
+	margin: 0 auto;
+ }
+ #bottom {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+  }
+
+  h4 {
+	padding-left: 15rem;
+  }
+

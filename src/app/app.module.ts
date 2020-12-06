@@ -19,6 +19,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
+import { ArtistPageComponent } from './artist-page/artist-page.component';
+import { AlbumPageComponent } from './album-page/album-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
     AlbumComponent,
     MusicPlayerComponent,
     MusicPlayerBarComponent,
-    PlaylistPageComponent
+    PlaylistPageComponent,
+    ArtistPageComponent,
+    AlbumPageComponent
   ],
   imports: [
     BrowserModule,
