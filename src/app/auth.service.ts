@@ -9,7 +9,24 @@ import { map, catchError } from 'rxjs/operators';
 export class AuthService {
   private path='http://localhost:3000/'
   private _token:string=null;
+  private _id:string=null;
   CurrentUser: ReplaySubject<string>=new ReplaySubject<string>();
+
+  get id():string{
+    if (this._id==null){
+      this._id=localStorage.getItem('id')
+    }
+    return this._id;
+  }
+  
+  set id(val:string){
+    this._id=val;
+    if (val==null)
+      localStorage.removeItem('id');
+    else
+      localStorage.setItem('id',val);
+  }
+
 
   get token():string{
     if (this._token==null){
@@ -40,6 +57,7 @@ export class AuthService {
       console.log(result);
       if (result['status']!='success'){
         this.token=null;
+        this.id=null;
         this.CurrentUser.next(null);
       }
       else{
@@ -48,6 +66,7 @@ export class AuthService {
 
     },err=>{
       this.token=null;
+      this.id=null;
     });
   }
 
@@ -55,10 +74,16 @@ export class AuthService {
     return this.http.post<any>(this.path+'login',{email: email,password: password })
       .pipe(map(user=>{
         this.token=user.data.token
+        this.id=user.data.id
         this.CurrentUser.next(user.data.user.email);
         return user.data.user;
-      }),catchError(err=>{this.CurrentUser.next(null);this.token=null;return throwError(err.message||'server error')}));
+      }),catchError(err=>{this.CurrentUser.next(null);this.token=null;return throwError(err||'server error')}));
   }
+
+  register(email: string,password:string): Observable<any>{
+    return this.http.post<any>(this.path+'register',{email: email,password: password });
+  }
+
   logout(){
     this.token=null;
     this.CurrentUser.next(null);

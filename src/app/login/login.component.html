@@ -1,7 +1,9 @@
+
 <div class="row mt-5">
     <div class="col"></div>
     <div class="col">
         <h1 class="display-4 mt-3">Login</h1>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
         <p>
             <a href="signUp">Or do you want to sign up, instead?</a>
         </p>
@@ -29,7 +31,7 @@
                         <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                         Login
                     </button>
-                    <a routerLink="/register" class="btn btn-link">Register</a>
+                    <a routerLink="/signUp" class="btn btn-link">Register</a>
                 </div>
                 </form>
             </div>

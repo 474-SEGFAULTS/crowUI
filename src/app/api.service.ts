@@ -15,23 +15,26 @@ export class ApiService {
   // ============================== crow stuff ==============================
 
   getSong(songID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/song/' + songID)
+    return this.http.get(this.path + 'song/' + songID)
   }
 
   getPlaylist(playlistID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/playlist/' + playlistID)
+    return this.http.get(this.path + 'playlist/' + playlistID)
   }
 
   getAlbum(albumID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/album/' + albumID)
+    return this.http.get(this.path + 'album/' + albumID)
   }
 
   getArtist(artistID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/artist/' + artistID)
+    return this.http.get(this.path + 'artist/' + artistID)
   }
 
   getGenre(genreID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/genre/' + genreID)
+    return this.http.get(this.path + 'genre/' + genreID)
   }
 
+  getUserPlaylist(userID: string): Observable<any> {
+    return this.http.get(this.path + 'user/' + userID + '/playlists')
+  }
 }
