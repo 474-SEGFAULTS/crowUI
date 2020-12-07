@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
+/*
+	genresCollection = [{
+		'id': 1,
+		'title': 'song name',
+		'artist': 'someone',
+		'album': 'someone2',
+		'created': 'yesterday'
+	}] */
 
   constructor() { }
 

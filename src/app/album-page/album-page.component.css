@@ -1,0 +1,20 @@
+body {
+	padding-top: 5rem;
+	background-color: lightgray;    
+	height: 100vh;
+}
+
+tr {
+	cursor: pointer;
+}
+
+#picture {
+	background-image: url('../../assets/chicken.png');
+	float: right;
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+	padding-right: 30em;
+}
+
+
+
