@@ -1,35 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 import { ActivatedRoute } from '@angular/router';
-import { ApiService } from '../api.service';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 import { PlayerService } from '../player.service';
+import { url } from 'inspector';
 
 @Component({
-  selector: 'app-playlist-page',
-  templateUrl: './playlist-page.component.html',
-  styleUrls: ['./playlist-page.component.css']
+  selector: 'app-artist-page',
+  templateUrl: './artist-page.component.html',
+  styleUrls: ['./artist-page.component.css']
 })
-export class PlaylistPageComponent implements OnInit {
-  
+export class ArtistPageComponent implements OnInit {
+
+  examplePlaylist = [{
+		'id': 1,
+		'title': 'song name',
+		'artist': 'someone',
+		'album': 'someone2',
+		'created': 'yesterday'
+  }]
   id: number;
   songs = [];
   name: string;
-  create_by: string;
+  pic: string;
+  
   constructor(private apiSvc:ApiService, 
     private route:ActivatedRoute, 
-    private playSvc:PlayerService) { }
+    private playSvc:PlayerService) { 
+  }
 
   ngOnInit(): void {
     this.id = parseInt(this.route.snapshot.params['id']);
     this.loadSongs();
-  }
-  loadSongs(): void {
     
+  }
+
+  loadSongs(): void {
     let i = 0;
-		this.apiSvc.getPlaylist(this.id).subscribe(response => {
+		this.apiSvc.getArtist(this.id).subscribe(response => {
       this.name = response.name;
-      this.apiSvc.getUserName(response.created_by_user).subscribe(name => {
-        this.create_by=name.name;
-      })
+      this.pic = response.pic;
 			for(var song of response.songs){
         this.apiSvc.getSong(song).subscribe(resp => {
           this.songs.push(resp);
@@ -48,7 +59,10 @@ export class PlaylistPageComponent implements OnInit {
 			console.log('ERROR!');
 			console.log(err);
     });
+    
+    
   }
+  
   getAlbumName(id: number):any {
     this.apiSvc.getAlbum(id).subscribe(response => {
       console.log(response.name);
@@ -61,5 +75,4 @@ export class PlaylistPageComponent implements OnInit {
   playSong(song: any): void {
     this.playSvc.play(song);
 	}
-
 }

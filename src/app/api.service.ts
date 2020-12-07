@@ -22,10 +22,17 @@ export class ApiService {
     return this.http.get(this.path + 'playlist/' + playlistID)
   }
 
+  getAlbums() : Observable<any> {
+    return this.http.get(this.path + 'album/')
+  }
+
   getAlbum(albumID: number) : Observable<any> {
     return this.http.get(this.path + 'album/' + albumID)
   }
 
+  getArtists() : Observable<any> {
+    return this.http.get(this.path + 'artist/')
+  }
   getArtist(artistID: number) : Observable<any> {
     return this.http.get(this.path + 'artist/' + artistID)
   }
@@ -36,5 +43,9 @@ export class ApiService {
 
   getUserPlaylist(userID: string): Observable<any> {
     return this.http.get(this.path + 'user/' + userID + '/playlists')
+  }
+
+  getUserName(userID: string): Observable<any> {
+    return this.http.get(this.path + 'user/' + userID)
   }
 }

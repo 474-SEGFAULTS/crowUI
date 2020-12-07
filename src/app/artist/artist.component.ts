@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-artist',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistComponent implements OnInit {
   artists = [];
-  constructor() { }
+
+  
+  constructor(private apiSvc:ApiService, public authSvc:AuthService ) { }
 
   ngOnInit(): void {
+    this.loadPlaylist();
   }
 
+  loadPlaylist(): void {
+		this.apiSvc.getArtists().subscribe(response => {
+      this.artists=response;
+    }, err => {
+			console.log('ERROR!');
+			console.log(err);
+		})
+	}
 }
