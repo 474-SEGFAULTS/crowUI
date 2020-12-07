@@ -3,7 +3,8 @@ import { ApiService } from 'src/app/api.service';
 import { ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-
+import { PlayerService } from '../player.service';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-artist-page',
@@ -19,25 +20,59 @@ export class ArtistPageComponent implements OnInit {
 		'album': 'someone2',
 		'created': 'yesterday'
   }]
+  id: number;
+  songs = [];
+  name: string;
+  pic: string;
   
-  constructor(private apiSvc:ApiService, private route:ActivatedRoute) { 
+  constructor(private apiSvc:ApiService, 
+    private route:ActivatedRoute, 
+    private playSvc:PlayerService) { 
   }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.params['id']);
-    console.log("help");
+    this.id = parseInt(this.route.snapshot.params['id']);
+    this.loadSongs();
+    
   }
 
-  loadPlaylist(id: number): void {
-		this.apiSvc.getPlaylist(id).subscribe(response => {
-			console.log(response);
+  loadSongs(): void {
+    let i = 0;
+		this.apiSvc.getArtist(this.id).subscribe(response => {
+      this.name = response.name;
+      this.pic = response.pic;
+			for(var song of response.songs){
+        this.apiSvc.getSong(song).subscribe(resp => {
+          this.songs.push(resp);
+          this.apiSvc.getAlbum(this.songs[i]['album']).subscribe(response => {
+            console.log(response.name);
+            this.songs[i]['album'] = [this.songs[i]['album'],response.name];
+            i++;
+          }, err => {
+            console.log('ERROR!');
+            console.log(err);
+          })
+        })
+      }
+      console.log(this.songs);
 		}, err => {
+			console.log('ERROR!');
+			console.log(err);
+    });
+    
+    
+  }
+  
+  getAlbumName(id: number):any {
+    this.apiSvc.getAlbum(id).subscribe(response => {
+      console.log(response.name);
+      return response.name;
+    }, err => {
 			console.log('ERROR!');
 			console.log(err);
 		})
   }
-  
-  playSong(id: string): void {
-		console.log("Play song #" + id);
+  playSong(song: any): void {
+    this.playSvc.play(song);
 	}
 }

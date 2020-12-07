@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-album',
@@ -13,9 +15,22 @@ export class AlbumComponent implements OnInit {
 		'album': 'album name',
 	}] */
 
-  constructor() { }
+  albums = [];
+
+  
+  constructor(private apiSvc:ApiService, public authSvc:AuthService ) { }
 
   ngOnInit(): void {
+    this.loadPlaylist();
   }
+
+  loadPlaylist(): void {
+		this.apiSvc.getAlbums().subscribe(response => {
+      this.albums=response;
+    }, err => {
+			console.log('ERROR!');
+			console.log(err);
+		})
+	}
 
 }

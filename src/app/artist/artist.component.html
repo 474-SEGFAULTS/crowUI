@@ -4,6 +4,12 @@
   </div>
 
   <div class="container align-items-center">
+    <div class="row justify-content-md-center " >
+			<div class="text-center col p-3" routerLink="/artists/{{p.id}}" *ngFor="let p of artists">
+				<img [src]=p.pic alt="img" width="250px" height="250px">
+				<h3 class="caption">{{ p.name }}</h3>
+			</div>
+      <!--<div class="text-center col p-3">
     <div class="row justify-content-md-center ">
 
       <div class="text-center col p-3" routerLink="/artists/1" routerLinkActive="active">
@@ -11,11 +17,10 @@
         <h3 class="caption">Coolest Kitten</h3>
       </div>
 
-       <!--
+       
     <div *ngFor="let p of artistsCollection">
       <img src=(click)="playSong( p.id )">{{ p.coverimg }} alt="img" width="250px" height="250px">
-          <p class="caption"> (click)="playSong( p.id )">{{ p.artist}} </p> </div>
-  -->  
+          <p class="caption"> (click)="playSong( p.id )">{{ p.artist}} </p> </div>  
   
       <div class="text-center col p-3" routerLink="/artists/2" routerLinkActive="active">
         <img src="https://cdn.theatlantic.com/static/mt/assets/science/cat_caviar.jpg" alt="img" width="250px" height="250px">
@@ -50,13 +55,7 @@
       <div class="text-center col p-3" routerLink="/artists/8" routerLinkActive="active">
         <img src="https://cdn.theatlantic.com/static/mt/assets/science/cat_caviar.jpg" alt="img" width="250px" height="250px">
         <h3 class="caption">Cool Kitten</h3>
-      </div>
-
-      <div class="text-center col p-3" routerLink="/artists/9" routerLinkActive="active">
-        <img src="https://cdn.theatlantic.com/static/mt/assets/science/cat_caviar.jpg" alt="img" width="250px" height="250px">
-        <h3 class="caption">Coolest Kitten</h3>
-      </div>
-
+      </div>-->
     </div>
   </div>
 

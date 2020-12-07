@@ -4,6 +4,7 @@ import { Component, OnInit, InputDecorator } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 
 import { $ } from 'protractor';
+import { AuthService } from '../auth.service';
 
 @Component({
 	selector: 'app-playlist',
@@ -12,27 +13,36 @@ import { $ } from 'protractor';
 })
 export class PlaylistComponent implements OnInit {
 
-	examplePlaylist = [{
-		'id': 1,
-		'title': 'song name',
-		'artist': 'someone',
-		'album': 'someone2',
-		'created': 'yesterday'
-	}]
+	examplePlaylist = []
 
-	constructor(private apiSvc:ApiService) { }
+	constructor(private apiSvc:ApiService, public authSvc:AuthService ) { 
+		this.loadPlaylist();
+	}
 
 	ngOnInit(): void {
 		console.log("help");
 	}
 
-	loadPlaylist(id: number): void {
-		this.apiSvc.getPlaylist(id).subscribe(response => {
-			console.log(response);
+	loadPlaylist(): void {
+		this.apiSvc.getUserPlaylist(this.authSvc.id).subscribe(response => {
+			for(var id of response){
+				this.apiSvc.getPlaylist(id).subscribe(response => {
+					this.examplePlaylist.push(response);
+				}, err => {
+			console.log('ERROR!');
+			console.log(err);
+		})
+			}
 		}, err => {
 			console.log('ERROR!');
 			console.log(err);
 		})
+	}
+
+	loadSongs():void {
+		for(var song of this.examplePlaylist){
+			this.apiSvc.getSong(song)
+		}
 	}
 
 	playSong(id: string): void {

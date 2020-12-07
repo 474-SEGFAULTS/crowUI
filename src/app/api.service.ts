@@ -9,83 +9,43 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class ApiService {
 
-  private path='http://localhost:3000/api/security/'
-  private _token:string=null;
-  CurrentUser: ReplaySubject<string>=new ReplaySubject<string>();
+  private path='http://localhost:3000/'
 
+  constructor(private http : HttpClient) {   }
   // ============================== crow stuff ==============================
 
   getSong(songID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/song/' + songID)
+    return this.http.get(this.path + 'song/' + songID)
   }
 
   getPlaylist(playlistID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/playlist/' + playlistID)
+    return this.http.get(this.path + 'playlist/' + playlistID)
+  }
+
+  getAlbums() : Observable<any> {
+    return this.http.get(this.path + 'album/')
   }
 
   getAlbum(albumID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/album/' + albumID)
+    return this.http.get(this.path + 'album/' + albumID)
   }
 
+  getArtists() : Observable<any> {
+    return this.http.get(this.path + 'artist/')
+  }
   getArtist(artistID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/artist/' + artistID)
+    return this.http.get(this.path + 'artist/' + artistID)
   }
 
   getGenre(genreID: number) : Observable<any> {
-    return this.http.get(this.path + 'api/genre/' + genreID)
+    return this.http.get(this.path + 'genre/' + genreID)
   }
 
-  // ============================== silber stuff ==============================
-
-  get token():string{
-    if (this._token==null){
-      this._token=localStorage.getItem('token')
-    }
-    return this._token;
-  }
-  
-  set token(val:string){
-    this._token=val;
-    if (val==null)
-      localStorage.removeItem('token');
-    else
-      localStorage.setItem('token',val);
-  }
-  get loggedIn():boolean{
-    return this.token!=null;
-  }
-  constructor(private http : HttpClient) { 
-    this.CurrentUser.next(null);
+  getUserPlaylist(userID: string): Observable<any> {
+    return this.http.get(this.path + 'user/' + userID + '/playlists')
   }
 
-  //authorize calls the underlying api to see if the current token is valid (if it exists) and clears it if it is not.
-  //returns nothing, but updates token if it is invalid
-  authorize():void{
-    this.http.get(this.path+'authorize').subscribe(result=>{
-      //on success, we do nothing because token is good
-      if (result['status']!='success'){
-        this.token=null;
-      }
-      else{
-        this.CurrentUser.next(result['data'].email)
-      }
-
-    },err=>{
-      this.token=null;
-    });
+  getUserName(userID: string): Observable<any> {
+    return this.http.get(this.path + 'user/' + userID)
   }
-
-  login(email: string,password:string): Observable<any>{
-    return this.http.post<any>(this.path+'login',{email: email,password: password })
-      .pipe(map(user=>{
-        this.token=user.data.token
-        this.CurrentUser.next(user.data.user.email);
-        return user.data.user;
-      }),catchError(err=>{this.CurrentUser.next(null);this.token=null;return throwError(err.message||'server error')}));
-  }
-  logout(){
-    this.token=null;
-    this.CurrentUser.next(null);
-  }
-
 }

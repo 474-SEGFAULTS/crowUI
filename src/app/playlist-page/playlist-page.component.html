@@ -3,8 +3,8 @@
 
 	<header class="text-left text-black py-5">
 		<p class="display-7 lead mb-0">PLAYLIST</p>
-		<h1 class="display-4 font-weight-bold mb-4">My Playlist Title</h1>
-		<p class="display-5 font-italic">Created By: @username </p>
+		<h1 class="display-4 font-weight-bold mb-4">{{name}}</h1>
+		<p class="display-5 font-italic">Created By: @{{create_by}} </p>
 		<button type="button" class="btn btn-primary btn-lg">Load Playlist</button> <!--(click)="loadPlaylist(1)"-->
 	</header>
 </div>
@@ -16,20 +16,18 @@
 			<th scope="col">Title</th>
 			<th scope="col">Artist</th>
 			<th scope="col">Album</th>
-			<th scope="col">Created</th>
+			<!--<th scope="col">Created</th>-->
 		</tr>
 	</thead>
 	<tbody>
-		<!--
-		<tr *ngFor="let p of examplePlaylist">
-			<th (click)="playSong( p.id )" scope="row">{{ p.id }}</th>
-			<td (click)="playSong( p.id )">{{ p.title }}</td>
-			<td (click)="playSong( p.id )">{{ p.artist }}</td>
-			<td (click)="playSong( p.id )">{{ p.album }}</td>
-			<td (click)="playSong( p.id )">{{ p.created }} </td>
+		<tr *ngFor="let p of songs; let i = index">
+			<th (click)="playSong( p )" scope="row">{{ i }}</th>
+			<td (click)="playSong( p )">{{ p.name }}</td>
+			<td (click)="playSong( p )">{{ p.artist }}</td>
+			<td routerLink = "/albums/{{p.album[0]}}">{{ p.album[1] }}</td>
+			<!--<td (click)="playSong( p.id )">{{ p.created }} </td>-->
 		</tr>
-		-->
-		<tr>
+		<!--<tr>
 			<th scope="row">2</th>
 			<td>Tell Me A Song</td>
 			<td>Someone2</td>
@@ -42,6 +40,6 @@
 			<td>Elmo</td>
 			<td>Someone2</td>
 			<td>11-29-20</td>
-		</tr>
+		</tr>-->
 	</tbody>
 </table>

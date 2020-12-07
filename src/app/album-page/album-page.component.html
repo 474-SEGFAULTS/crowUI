@@ -1,10 +1,10 @@
 <div class="container py-5">
-	<img id="picture" height=300px width = 300px >
+	<img id="picture" style="background-image:url({{album_cover}})" height=300px width = 300px >
 
 	<header class="text-left text-black py-5">
 		<p class="display-7 lead mb-0">ALBUM</p>
-		<h1 class="display-4 font-weight-bold mb-4">My Album Title</h1>
-		<p class="display-5 font-italic">Created By: @username </p>
+		<h1 class="display-4 font-weight-bold mb-4">{{name}}</h1>
+		<p class="display-5 font-italic">Artist: {{artist}} </p>
 		<button type="button" class="btn btn-primary btn-lg">Load Album</button> <!-- (click)="loadPlaylist(1)"-->
 	</header>
 </div>
@@ -15,19 +15,15 @@
 			<th scope="col">#</th>
 			<th scope="col">Title</th>
 			<th scope="col">Artist</th>
-			<th scope="col">Album</th>
-			<th scope="col">Created</th>
 		</tr>
 	</thead>
 	<tbody>
-		<!-- <tr *ngFor="let p of examplePlaylist">
-			<th (click)="playSong( p.id )" scope="row">{{ p.id }}</th>
-			<td (click)="playSong( p.id )">{{ p.title }}</td>
-			<td (click)="playSong( p.id )">{{ p.artist }}</td>
-			<td (click)="playSong( p.id )">{{ p.album }}</td>
-			<td (click)="playSong( p.id )">{{ p.created }} </td>
-		</tr> -->
-		<tr>
+		 <tr *ngFor="let p of songs; let i = index">
+			<th (click)="playSong( p )" scope="row">{{ i }}</th>
+			<td (click)="playSong( p )">{{ p.name }}</td>
+			<td (click)="playSong( p )">{{ p.artist }}</td>
+		</tr>
+		<!--<tr>
 			<th scope="row">2</th>
 			<td>Tell Me A Song</td>
 			<td>Someone2</td>
@@ -40,6 +36,6 @@
 			<td>Elmo</td>
 			<td>Someone2</td>
 			<td>11-29-20</td>
-		</tr>
+		</tr>-->
 	</tbody>
 </table>

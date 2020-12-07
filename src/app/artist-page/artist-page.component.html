@@ -1,10 +1,10 @@
 <div class="container py-5">
-	<img id="picture" height=300px width = 300px >
+	<img id="picture" style="background-image:url({{pic}})" height=300px width = 300px >
 
 	<header class="text-left text-black py-5">
 		<p class="display-7 lead mb-0">ARTIST</p>
-		<h1 class="display-4 font-weight-bold mb-4">Artist Name</h1>
-		<p class="display-5 font-italic">Created By: @username </p>
+		<h1 class="display-4 font-weight-bold mb-4">{{name}}</h1>
+		<p class="display-5 font-italic"> </p>
 		<button type="button" class="btn btn-primary btn-lg" >Load Artist Songs</button> <!-- (click)="loadPlaylist(1)"-->
 	</header>
 </div>
@@ -18,13 +18,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let p of examplePlaylist">
-			<th (click)="playSong( p.id )" scope="row">{{ p.id }}</th>
-			<td (click)="playSong( p.id )">{{ p.title }}</td>
-			<td (click)="playSong( p.id )">{{ p.artist }}</td>
-			<td (click)="playSong( p.id )">{{ p.album }}</td>
+		<tr *ngFor="let p of songs; let i = index">
+			<th (click)="playSong( p )" scope="row">{{ i }}</th>
+			<td (click)="playSong( p )">{{ p.name }}</td>
+			<td (click)="playSong( p )">{{ p.artist }}</td>
+			<td routerLink = "/albums/{{p.album[0]}}">{{ p.album[1] }}</td>
 		</tr>
-		<tr>
+		<!--<tr>
 			<th scope="row">2</th>
 			<td>Tell Me A Song</td>
 			<td>Someone2</td>
@@ -35,10 +35,10 @@
 			<td>Elmo's World</td>
 			<td>Elmo</td>
 			<td>Someone2</td>
-		</tr>
+		</tr>-->
     </tbody>
 </table>
-<div class="row">
+<!--<div class="row">
     <div class="col-sm-6 col-centered">
 <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="true">
    <ol class="carousel-indicators">
@@ -72,4 +72,4 @@
     </a>
   </div>
 </div>
-</div> 
+</div> -->

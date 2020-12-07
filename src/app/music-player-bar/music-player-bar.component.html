@@ -1,18 +1,17 @@
 <body>
-    <div class="player">
+    <div class="player" [hidden] ='!show'>
         <div class="left"></div>
         <div class="right">
             <div class="top">
-                <a class="song"
-                    href="https://piano-tiles.fandom.com/wiki/River_Flows_in_You">River flows in you</a>
-                <a class="artist"
-                    href="https://en.wikipedia.org/wiki/Yiruma">Yiruma</a>
+                <a class="song">{{songName}}</a>
+                <a class="artist">{{artist}}</a>
             </div>
             <div class="bottom">
-                <video controls="" _autoplay="" name="media">
-                    <source src="assets/music1.mp3"
+                <video #player="" class="media" controls="" _autoplay="" name="media">
+                    <source [src]="songLink"
                         type="audio/mpeg"></video>
             </div>
         </div>
     </div>
 </body>
+<!--<video controls #player="" (ended)="playerEnded()"></video>-->
